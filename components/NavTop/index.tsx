@@ -11,9 +11,8 @@ import {
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { useWeb3React } from '@web3-react/core'
 import { injected } from "../wallet/connect"
-
-
-
+import {  Web3Address } from '../Web3Address.Web3Address'
+import {Web3Button} from '../Web3Button'
 
 type Props = {
   onOpen: () => void;
@@ -25,22 +24,7 @@ export default function NavTop(props: Props) {
   const bg = useColorModeValue("white", "gray.800");
   const color = useColorModeValue("#212145", "gray.800");
 
-  const { active, account, library, connector, activate, deactivate } = useWeb3React();
 
-  async function connectWallet() {
-    try {
-      await activate(injected)
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  function disconnectWallet() {
-    try {
-      deactivate()
-    } catch (error) {
-      console.log(error);
-    }
-  }
  
   return (
     <Flex
@@ -80,16 +64,13 @@ export default function NavTop(props: Props) {
       
 
       <Flex align="center">
-        <Button
-        onClick={connectWallet}
-          color={color}
-          borderWidth={1}
-          borderColor="#212145"
-          bg="purple.200"
-        >
-          Connect Wallet
-        </Button>
+      
+      <Web3Button />
       </Flex>
+      <main className="grow p-8 text-center">
+     
+        <Web3Address />
+      </main>
     </Flex>
   );
 }

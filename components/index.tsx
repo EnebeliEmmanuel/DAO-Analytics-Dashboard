@@ -10,3 +10,5 @@ export { default as Loader } from "./Loader";
 export { default as BasicTable } from "./BasicTable";
 export { default as SocialLinks } from "./SocialLinks";
 export { default as Summary } from "./Summary";
+export { Web3Button } from './Web3Button'
+export {  Web3Address } from './Web3Address.Web3Address'

@@ -2,22 +2,22 @@
 
 Daolytics is a basic open source, multi-chain compatible,fully customisable DAO Analytics Dashboard.
 
-#### Live website : [daolytics](https://daolytics-indol.vercel.app/)
+#### Live website : [daolytics](https://github.com/analytics-Dashboard/DAO-Analytics-Dashboard.git)
 
-#### GitHub Repository : [here](https://github.com/Seth-McKilla/daolytics)
+#### GitHub Repository : [here](https://github.com/analytics-Dashboard/DAO-Analytics-Dashboard.git)
 
-#### Short Pitch : Please see this [pitchdeck](https://www.canva.com/design/DAExSawuwJU/bM04_PNJSpMcUB03UF9hAA/view?utm_content=DAExSawuwJU&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) explaining the Pain points, Target Audience and the solution
-#### AdobeXD Mockup : Please go through this [Mockup](https://xd.adobe.com/view/4a2143da-b252-42f0-b331-9147fec72fa0-1f72/?fullscreen) which shows how we envision DAOlytics
+<!-- #### Short Pitch : Please see this [pitchdeck](https://www.canva.com/design/DAExSawuwJU/bM04_PNJSpMcUB03UF9hAA/view?utm_content=DAExSawuwJU&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) explaining the Pain points, Target Audience and the solution
+#### AdobeXD Mockup : Please go through this [Mockup](https://xd.adobe.com/view/4a2143da-b252-42f0-b331-9147fec72fa0-1f72/?fullscreen) which shows how we envision DAOlytics -->
 
-#### Demo video and small pitch : [video](https://drive.google.com/drive/folders/1smP2WS9i943l5PxesTcSD8hcYghUljt5?usp=sharing)
+<!-- #### Demo video and small pitch : [video](https://drive.google.com/drive/folders/1smP2WS9i943l5PxesTcSD8hcYghUljt5?usp=sharing) -->
 
-#### Date of starting the project : November, 2021
+#### Date of starting the project : July, 2022
 
 #### Wallet Address : 0x9C0177e8dDA1D562149F33B6Af8014228ca11E44
 
-#### Person of Contact : Name - [Seth McCullough](https://twitter.com/SethMcKilla) , email - seth@endevrs.dev
+#### Person of Contact : Name - [Team DAOlytics](https://twitter.com/SethMcKilla) , email - teamdaolytics@gmail.dev
 
-#### Additional Documents : Please have a look at this [pdf](https://github.com/Seth-McKilla/daolytics/blob/main/DAOlytics%20features.pdf) which explains about the present as well as the future features of DAOlytics in detail.
+<!-- #### Additional Documents : Please have a look at this [pdf](https://github.com/Seth-McKilla/daolytics/blob/main/DAOlytics%20features.pdf) which explains about the present as well as the future features of DAOlytics in detail. -->
 
 
 #### Running the app
@@ -29,7 +29,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, clone the repo with the following git command:
 
 ```bash
-git clone https://github.com/Seth-McKilla/daolytics.git
+git clone https://github.com/analytics-Dashboard/DAO-Analytics-Dashboard.git
 ```
 
 Second, open a terminal in the root directory of the project and run:
@@ -82,5 +82,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <br />
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made with :heart: by [Seth](https://github.com/Seth-McKilla), [Cheeto](https://github.com/Calm-Rock) and [Sabelo](https://github.com/divinevibration?tab=repositories) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Made with :heart: by [Kokocodes](https://github.com/EnebeliEmmanuel), [Glory Praise](https://github.com/emmaglorypraise), [Mercy](https://github.com/OdionMercy8) and [Vicentia](https://github.com/vicent...) 
 

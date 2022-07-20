@@ -1,5 +1,5 @@
-import Page from "@/components/Page";
-import Nav from "@/components/Nav";
+import Page from "../components/Page";
+import Nav from "../components/Nav";
 import {
   Stat,
   StatLabel,
@@ -8,19 +8,19 @@ import {
   GridItem,
   Box,
 } from "@chakra-ui/react";
-import parser from "@/utils/parser";
+
 import dynamic from "next/dynamic";
 
-const LineChart = dynamic(() => import("@/components/LineChart"), {
+const LineChart = dynamic(() => import("../components/LineChart"), {
   ssr: false,
 });
-const SparkLineChart = dynamic(() => import("@/components/SparkLineChart"), {
+const SparkLineChart = dynamic(() => import("../components/SparkLineChart"), {
   ssr: false,
 });
-const Bar = dynamic(() => import("@/components/Bar"), {
+const Bar = dynamic(() => import("../components/Bar"), {
   ssr: false,
 });
-const DonutChart = dynamic(() => import("@/components/DonutChart"), {
+const DonutChart = dynamic(() => import("../components/DonutChart"), {
   ssr: false,
 });
 
@@ -51,7 +51,7 @@ export default function Dao(props) {
               <StatHelpText>The number of votes cast each day</StatHelpText>
             </Stat>
             <Box>
-              <SparkLineChart data={props.votes} />
+              <SparkLineChart  />
             </Box>
           </GridItem>
           <GridItem
@@ -69,7 +69,7 @@ export default function Dao(props) {
               </StatHelpText>
             </Stat>
             <Box>
-              <SparkLineChart data={props.proposals} />
+              <SparkLineChart  />
             </Box>
           </GridItem>
           <GridItem
@@ -89,7 +89,7 @@ export default function Dao(props) {
               </StatHelpText>
             </Stat>
             <Box>
-              <LineChart data={props.holdings} />
+              <LineChart  />
             </Box>
           </GridItem>
           <GridItem
@@ -106,7 +106,7 @@ export default function Dao(props) {
                 The number of the votes delegated to and held by addresses
               </StatHelpText>
             </Stat>
-            <Bar data={props.power.data} categories={props.power.categories} />
+            <Bar />
           </GridItem>
           {props.concentration && (
             <>
@@ -126,8 +126,7 @@ export default function Dao(props) {
                 </Stat>
                 <Box>
                   <Bar
-                    data={props.concentration.data.slice(0, 10)}
-                    categories={props.concentration.categories.slice(0, 10)}
+                    
                   />
                 </Box>
               </GridItem>
@@ -147,8 +146,7 @@ export default function Dao(props) {
                 </Stat>
                 <Box>
                   <DonutChart
-                    data={props.concentration.data}
-                    labels={props.concentration.categories}
+                   
                   />
                 </Box>
               </GridItem>
@@ -160,62 +158,4 @@ export default function Dao(props) {
   );
 }
 
-export async function getServerSideProps({ params }) {
-  const votes = await fetch(
-    "https://polydao-api.vercel.app/dao/" + params.dao + "/governance/votes"
-  )
-    .then((r) => parser(r))
-    .then((r) => r.count);
-  const powerRes = await fetch(
-    "https://polydao-api.vercel.app/dao/" + params.dao + "/governance/power"
-  )
-    .then((r) => parser(r))
-    .then((r) => r.power);
-  const power = {
-    data: powerRes.map((i) => i[2]),
-    categories: powerRes.map((i) => i[0]),
-  };
 
-  const proposals = await fetch(
-    "https://polydao-api.vercel.app/dao/" + params.dao + "/governance/proposals"
-  )
-    .then((r) => parser(r))
-    .then((r) => r.count);
-
-  const holdings = await fetch(
-    "https://polydao-api.vercel.app/dao/" +
-      params.dao +
-      "/governance/token/holdings"
-  )
-    .then((r) => parser(r))
-    .then((r) => r.holdings);
-
-  const concentrationRes = await fetch(
-    "https://polydao-api.vercel.app/dao/" +
-      params.dao +
-      "/governance/token/concentration"
-  )
-    .then((r) => parser(r))
-    .then((r) => (!r.error ? r.concentration : false));
-  const concentration = concentrationRes
-    ? {
-        data: concentrationRes.map(function (i) {
-          return i[1];
-        }),
-
-        categories: concentrationRes.map(function (i) {
-          return i[0];
-        }),
-      }
-    : false;
-  return {
-    props: {
-      votes,
-      power,
-      proposals,
-      holdings,
-      concentration,
-      dao: params.dao,
-    },
-  };
-}

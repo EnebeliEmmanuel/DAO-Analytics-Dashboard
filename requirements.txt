@@ -1,5 +1,0 @@
-requests
-textblob
-tweepy
-nltk
-python-dotenv
